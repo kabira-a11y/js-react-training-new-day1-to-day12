@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Explorer</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="./js/main.js"></script>
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <p class="eyebrow">YOUR NEXT GREAT READ</p>
+      <h1>Book Explorer</h1>
+      <p>Search books, discover authors, and explore reading history.</p>
+    </header>
+
+    <section class="search-panel">
+      <form id="search-form">
+        <label for="search-input">Search by book title</label>
+        <div class="search-row">
+          <input
+            id="search-input"
+            type="search"
+            placeholder="Try JavaScript..."
+            value="JavaScript"
+            required
+          >
+          <button type="submit">Search</button>
+        </div>
+      </form>
+
+      <label for="year-filter">Filter by first publication year</label>
+      <select id="year-filter">
+        <option value="all">All years</option>
+        <option value="before2000">Before 2000</option>
+        <option value="from2000">2000 and later</option>
+      </select>
+    </section>
+
+    <section class="results-section">
+      <div class="results-heading">
+        <h2>Search Results</h2>
+        <p id="result-count"></p>
+      </div>
+
+      <p id="status" class="status" role="status" aria-live="polite">
+        Ready to explore books.
+      </p>
+
+      <div id="book-list" class="book-grid"></div>
+    </section>
+
+    <dialog id="book-dialog" aria-labelledby="detail-title">
+      <div id="book-detail"></div>
+      <button type="button" id="close-dialog" class="close-button">
+        Close
+      </button>
+    </dialog>
+
+    <footer>
+      <p>Book data provided by Open Library.</p>
+    </footer>
+  </main>
+</body>
+</html>
