@@ -1,0 +1,10 @@
+let value = "42";
+console.log(Number(value));
+console.log(parseInt(value));
+console.log(parseFloatr(value));
+console.log(Number("12.5px"));
+console.log(parseInt("12.5px"));
+console.log(parseFloat("12.5px"));
+console.log(Number(""));
+console.log(parseInt(""));
+console.log(parseFloat(""));

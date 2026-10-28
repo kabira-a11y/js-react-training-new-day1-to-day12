@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My To-do List</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="page-header">
+      <p class="eyebrow">DAILY PLANNER</p>
+      <h1>My To-do List</h1>
+      <p class="subtitle">Plan your day, one task at a time.</p>
+    </header>
+
+    <section class="todo-card">
+      <form id="task-form">
+        <label for="task-input">What do you need to do?</label>
+
+        <div class="input-row">
+          <input
+            type="text"
+            id="task-input"
+            placeholder="Enter a task..."
+            autocomplete="off"
+          >
+          <button type="submit" class="add-button">Add Task</button>
+        </div>
+      </form>
+
+      <p id="form-message" class="form-message" aria-live="polite"></p>
+
+      <div class="task-summary">
+        <span id="task-count">0 tasks left</span>
+        <span id="completed-count">0 completed</span>
+      </div>
+
+      <nav class="filters" aria-label="Filter tasks">
+        <button type="button" class="filter-button active" data-filter="all">
+          All
+        </button>
+        <button type="button" class="filter-button" data-filter="active">
+          Active
+        </button>
+        <button type="button" class="filter-button" data-filter="completed">
+          Completed
+        </button>
+      </nav>
+
+      <ul id="task-list" aria-label="Your tasks"></ul>
+
+      <p id="empty-message" class="empty-message">
+        No tasks here yet. Add your first task!
+      </p>
+    </section>
+
+    <footer>
+      <p>Small steps make big progress.</p>
+    </footer>
+  </main>
+</body>
+</html>
